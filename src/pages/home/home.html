@@ -1,14 +1,35 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-content no-bounce>
+  <div class="home-body" style="background:url(assets/img/home/background.png);background-size: cover;width: 100%;height: 100%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col (click)="navegateToDriving()">
+            <img src="assets/img/home/iniciar-viaje.png" width="84" height="84">
+            <p>Iniciar Viaje</p>
+        </ion-col>
+        <ion-col>
+          <div class="float-right" (click)="navegateTo()">
+              <img src="assets/img/home/boutique_icon.png" alt="" width="84" height="84">
+              <p>Tienda</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <img src="assets/img/home/regalos_icon.png" width="84" height="84" (click)="navegateToGifts()">
+          <p>Regalos</p>
+        </ion-col>
+        <ion-col (click)="navegateToChallenge()">
+            <div class="float-right" >
+          <img src="assets/img/home/reta a amigos_icon.png" width="84" height="84">
+          <p>Retalo</p>
+        </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-fab right bottom>
+        <button ion-fab color="secondary">
+          <ion-badge color="secondary" item-left>20 Pts</ion-badge>
+        </button>
+      </ion-fab>
+  </div>
+ </ion-content>

@@ -1,0 +1,16 @@
+<ion-content padding>
+  <div class="result">
+    <div *ngIf="!badDriver">
+        <img src="assets/img/driving/good-driver.png" alt="">
+        <h4>Tu viaje ha finalizado.</h4>
+        <p><small>Velocidad Promedio: {{speedAverage}} km/h</small></p>
+        <p><small>Número de frenadas abruptas: 4</small></p>
+        <p><small>Has realizado un trayecto bajo los estándares de un conductor responsable, te felicitamos. Has ganado 20 puntos.</small></p>
+    </div>
+    <div>
+        <img *ngIf="badDriver" src="assets/img/driving/bad-driver.png" alt="">
+    </div>
+    
+  </div>
+</ion-content>
+  

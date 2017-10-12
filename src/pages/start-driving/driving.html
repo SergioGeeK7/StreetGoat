@@ -1,0 +1,24 @@
+<ion-content no-bounce>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div #map id="map"></div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item *ngIf="!isDriving">
+                        <img src="assets/img/driving/start.png" (click)="startDriving()" width="auto" height="77" item-start>
+                        <strong>Iniciar</strong>
+                    <ion-badge item-end color='dark' class="vel">{{kmph}} KM/H</ion-badge>
+                </ion-item>
+                <ion-item *ngIf="isDriving">
+                        <img src="assets/img/driving/stop.png" (click)="startDriving()" width="auto" height="77" item-start>
+                        <strong>Fin</strong>
+                    <ion-badge item-end color='dark' class="vel">{{kmph}} KM/H</ion-badge>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
